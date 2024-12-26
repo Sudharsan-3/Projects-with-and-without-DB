@@ -1,0 +1,45 @@
+<%- include('partials/header.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="center">
+
+          <form  action="/add" method="post" class="main">
+            <label for="ISBN">Enter id : </label>
+            <input type="text" name="id" id="">
+        <label for="ISBN">Enter isbn number : </label>
+        <input type="text" name="isbnNo" id="">
+        <label for="bName">Enter Book name : </label>
+        <input type="text" name="bName" id="">
+        <label for="aName">Enter Author name : </label>
+        <input type="text" name="aName" id="">
+        <label for="Description">Book Description  : </label>
+        <textarea type="text" name="describtion" id="discribtion" cols="30" rows="10" placeholder="Write your thoughts" required></textarea>
+        <label for="rating">Rating</label>
+        <input type="text" name="bRating">
+        <label for="date">Date</label>
+        <input type="text" name="bdate">
+<input type="submit" value="Submit">
+    </form>
+    </div>
+  
+</body>
+</html>
+
+<%- include('partials/footer.ejs') %>
+
+<!-- <select id="cars">
+    <label for="cars">Choose a car:</label>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select> -->

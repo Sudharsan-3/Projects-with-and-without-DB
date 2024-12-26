@@ -1,0 +1,45 @@
+<%- include('partials/header.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    
+    <% data.forEach((datas)=>{ %>
+            <div class="center " >
+                <div class="main_container " id="<%= datas.id %>" method="post"> 
+            <img  src="https:covers.openlibrary.org/b/isbn/<%=datas.isbn_no%>-L.jpg" height="50%" width="50%" alt="">
+            <div class="subContainer">
+            <h3>Book Name :</h3> <p> <%= datas.book_name %></p>
+            <h3>Author Name :</h3><p> <%= datas.book_author %></p>
+        <h3>Rating :</h3>  <p><%= datas.book_rating %> /10</p>
+        <h3>Date :  </h3><p><%= datas.book_duration %></p>
+            <h3>Discription :</h3> <p> <%= datas.book_description %></p> 
+            <form name="<%= datas.id %>"  method="post" class="mainForm">
+                <button name="id" value="<%=datas.id%>" method="" formaction="/edit">
+                <input type="hidden" name="name" value="<%=datas.book_name %>">
+                    Edit
+                </button>
+                <button name="id" value="<%=datas.id%>" method="delete" formaction="/delete">
+                    <input type="hidden" name="name" value="<%=datas.book_name %>">
+                    Delete
+                </button >
+            </form>
+        
+            </div>
+    
+        </div>
+    <% }) %>
+        
+            </div>
+
+</body>
+</html>
+  
+<%- include('partials/footer.ejs') %>

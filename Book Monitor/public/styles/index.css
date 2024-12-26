@@ -1,0 +1,77 @@
+.container_main {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+/* header.ejs css */
+.conatiner {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  background-color: black;
+  padding: 2em;
+  gap: 1em;
+}
+a {
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+/* index.ejs css */
+.main_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  border: 5px solid black;
+}
+.main_container img {
+  max-width: 50%; /* Limit the width to 50% */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.subContainer {
+  width: 95%;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: repeat(2, auto);
+  gap: 8px;
+  grid-auto-flow: row dense;
+    margin: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+.center {
+  width: 500px; /* Set a width for the element */
+  margin: 0 auto; /* Center both horizontally and vertically */
+  padding-top: 15px;
+}
+.mainForm {
+  /* margin: 1em; */
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(1, auto);
+  grid-template-columns: repeat(2, auto);
+  gap: 8px;
+  grid-auto-flow: row dense;
+
+  justify-content: center;
+  align-content: center;
+}
+
+/* new.ejs css */
+.main {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+}

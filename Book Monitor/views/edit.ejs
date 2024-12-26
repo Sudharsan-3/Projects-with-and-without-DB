@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+    <div class="center">
+
+        <form action="/update" method="post" class="main">
+            <input type="hidden" name="id" value="<%= data.id %>">
+            <label for="bName">Enter Book name:</label>
+            <input type="text" name="bName" value="<%=data.book_name%>" >
+          
+            <label for="aName">Enter Author name:</label>
+            <input type="text" name="aName" value="<%= data.book_author %>" >
+          
+            <label for="Description">Book Description:</label>
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Write your thoughts" required><%= data.book_description %></textarea>
+          
+            <label for="rating">Rating:</label>
+            <input type="text" name="bRating" value="<%= data.book_rating %>">
+          
+            <label for="date">Date:</label>
+            <input type="text" name="bdate" value="<%= data.book_duration %>">
+            <input type="submit">
+          </form>
+          
+  </div>
+    
+</body>
+</html>
+
+<%- include('partials/footer.ejs') %>

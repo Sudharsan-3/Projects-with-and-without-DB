@@ -1,0 +1,43 @@
+<%- include('partials/header.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <%  if(locals.dogsImage && locals.dogName){%>
+    <h1>DOGS-RANDOM-API-IMAGES</h1>
+    <form class="submain" method="post">
+    <img class="recividImage" src="<%=locals.dogsImage %>" alt="">
+    <div class="blur"> <h3>Funny Name : <%= dogName %></h3> </div>
+<div class="blur "><button class="next_btn" formaction="/dogNext">Next</button></div>
+    
+</form>
+  <%   }else{ %>
+        <h1>DOGS-RANDOM-API-IMAGES</h1>
+        <form class="submain" method="post">
+    
+      <div class="blur ">
+        <h3>CLICK ON NEXT TO LOAD AN IMAGE</h3>
+        <button class="next_btn" formaction="/dogNext">Next</button>
+      </div>  
+    </form>
+  <%   }%> 
+    
+    
+        
+        
+    </div>
+    
+   
+
+</body>
+</html>
+
+<%- include('partials/footer.ejs') %>
