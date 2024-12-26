@@ -1,5 +1,5 @@
 Book Monitor,Permalist Project,+Family+Travel+Tracker , 
-The above files are nedds to use an POSTGRES as an sata base and i gave you the query for the postgres
+The above files are nedds to use an POSTGRES as an data base and i gave you the query for the postgres table on the project folder with name of querry
 After Creating an db table then you need to connect the database with the express server the name, pass,etc,
 
 Installing Packages
